@@ -18,10 +18,7 @@ public class StudentService {
     }
 
     public List<StudentResponse> getAllStudents() {
-        return studentRepository.findAll()
-                .stream()
-                .map(StudentResponse::fromEntity)
-                .toList();
+        return List.of();
     }
 
     public StudentResponse getStudentById(Long id) {
