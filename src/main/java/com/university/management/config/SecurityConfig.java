@@ -49,7 +49,7 @@ public class SecurityConfig {
                         // TEACHER and ADMIN can update students
                         .requestMatchers(HttpMethod.PUT, "/api/students/**").hasAnyRole("TEACHER", "ADMIN")
                         // Only ADMIN can create students
-                        .requestMatchers(HttpMethod.POST, "/api/students", "/api/students/**").hasRole("SADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/students", "/api/students/**").hasRole("ADMIN")
                         // Only ADMIN can delete students
                         .requestMatchers(HttpMethod.DELETE, "/api/students/**").hasRole("ADMIN")
                         // Other endpoints require authentication
